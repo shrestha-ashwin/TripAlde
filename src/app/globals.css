@@ -2,32 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.btn {
+  @apply text-white bg-black py-2 px-4 text-xs rounded-md hover:cursor-pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.hero {
+  grid-template-columns: 6fr 4fr;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hero-btn {
+  @apply text-white bg-black py-[10px] px-6 text-sm rounded-md hover:cursor-pointer;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.heading {
+  @apply font-bold text-[3rem] leading-[3.5rem];
+}
+
+.sampleGrid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.footerGrid {
+  grid-template-columns: 2fr 8fr;
+}
+
+.footerLinkContainer {
+  @apply flex flex-col gap-4;
+}
+
+.footerLink {
+  @apply text-sm flex flex-col gap-[0.375rem];
 }
