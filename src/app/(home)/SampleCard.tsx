@@ -1,4 +1,4 @@
-export default function SampleCard({ src, text = "not found" }) {
+export default function SampleCard({ src = "", text = "not found" }) {
   return (
     <div>
       <img src={src} />
